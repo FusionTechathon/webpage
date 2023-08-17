@@ -11,23 +11,36 @@ body {
 
 /* Style for the hero section */
 .hero {
-    background-image: url('hero-bg.jpg'); /* Add your hero background image */
-    background-size: cover;
+    background-color: #3498db; /* Blue color */
     color: white;
     text-align: center;
-    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
 }
 
 /* Style for the scheduled date section */
 .scheduled-date {
-    background-color: #f4f4f4;
+    background-color: #e74c3c; /* Red color */
+    color: white;
     text-align: center;
-    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
 }
 
 /* Style for the information section */
 .information {
-    background-color: #ffffff;
+    background-color: #2ecc71; /* Green color */
+    color: white;
     text-align: center;
-    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
 }
