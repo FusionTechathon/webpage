@@ -1,35 +1,359 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
 }
 
+/* Apply a global background color */
+body {
+  background-color: #f0f0f0;
+}
+
+/* Header Styles */
 header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+  background-color: transparent;
+  backdrop-filter: none;
+  color: #fff;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: flex-start; /* Move navigation contents to the right */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  height: 40px;
+  backdrop-filter: blur(10px); /* Glassy background effect */
 }
 
-nav {
-    background-color: #444;
-    text-align: center;
-    padding: 0.5rem;
+.header-transparent {
+  background-color: transparent;
+  backdrop-filter: none;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1rem;
+.header-scroll {
+  background-color: rgba(51, 51, 51, 0.5);
+  backdrop-filter: blur(10px);
 }
 
-main {
-    padding: 2rem;
+/* Navigation Links Styles */
+header nav ul {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase; /* Make the text uppercase */
+  margin-left: 100px;
 }
 
+header nav ul li {
+  margin-right: 1rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: blue;
+}
+
+/* Sections */
+#hero,
+#about,
+#projects,
+#contact {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+
+#hero {
+  background-color: #3d3d3d; /* Change the background color */
+}
+
+#hero .hero-content {
+  display:flex;
+  align-items: center;
+}
+
+#hero .hero-text {
+  
+  padding: 5px;
+  margin-right: 200px; 
+  text-align: center;/* Align text to the center */
+}
+
+#hero .hero-text h3 {
+  font-size: 2.4rem; /* Adjust font size for smaller screens */
+}
+
+#hero .hero-text p {
+  font-size: 1.2rem; /* Adjust font size for smaller screens */
+  margin-top: 10px; /* Add spacing between heading and paragraph */
+}
+#hero .hero-image {
+  flex: 1;
+  padding: 225px;
+  text-align: right; /* Align image to the left */
+  
+  margin-left: 1px;
+}
+
+#hero .hero-image img {
+  max-width: 480%; /* Make sure the image fits within its container */
+  height: auto;
+}
+
+
+
+
+/* Add styles for overlay images */
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1; /* Adjust the opacity as needed */
+}
+
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%; /* Ensure the container takes the full width */
+}
+.parallax-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; /* Apply 3D transform style */
+  perspective: 1000px; /* Set the perspective value */
+}
+
+.parallax-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: transform 0.5s ease; /* Add a smooth transition */
+}
+
+.layer1 {
+  transform: translateZ(0px); /* No pop-out effect for the base layer */
+}
+
+.layer2 {
+  transform: translateZ(30px); /* Apply a pop-out effect for the second layer */
+}
+
+.layer3 {
+  transform: translateZ(60px); /* Apply a greater pop-out effect for the third layer */
+}
+
+
+.know-more-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: yellow;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Add transform to the transition */
+}
+
+.know-more-button:hover {
+  background-color: #0e70f9;
+  color: #000000;
+  transform: translateZ(50px); /* Add the parallax effect on hover */
+}
+
+#about {
+  background-color: #42526e;
+}
+
+#projects {
+  background-color: #4f6391;
+}
+
+#achievements {
+  background-color: #6e8cbf;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+#achievements h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.achievement-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.achievement-item {
+  flex: 0 1 calc(33.33% - 40px); /* Three items per row with some spacing */
+  padding: 20px;
+  background-color: #42526e;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.achievement-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.achievement-item p {
+  font-size: 1.1rem;
+}
+
+
+#contact {
+  background-color: #5f78a3;
+}
+
+/* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  color: #fff;
 }
+
+/* Additional Styles */
+h1, h2, h3 {
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-bottom: 0; /* Remove default margin for heading elements */
+}
+
+/* Sidebar Menu Styles */
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hide the menu by default */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  transition: left 0.3s ease;
+  z-index: 200;
+}
+
+.sidebar-menu nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu nav ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar-menu nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.sidebar-menu nav ul li a:hover {
+  color: blue;
+}
+/* Media Query for Mobile Devices */
+/* Media Query for Mobile Devices */
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+  header nav ul {
+    list-style: none;
+    display: flex;
+    text-transform: uppercase; /* Make the text uppercase */
+    margin-left: 2px;
+  }
+  #hero .hero-content {
+    flex-direction: column; /* Stack elements vertically on mobile */
+    align-items: center; /* Center align items horizontally */
+    justify-content: center; /* Center align items vertically */
+    height: 100vh; /* Make sure the content takes up the full viewport height */
+  }
+
+  #hero .hero-text {
+    text-align: center;
+    margin: 0 20px; /* Add horizontal margin for spacing */
+    margin-top: 100px;
+  }
+
+  #hero .hero-image {
+    padding: 0; /* Remove padding on mobile */
+    text-align: center; /* Center the image */
+    margin-top: 20px; /* Add spacing between text and image */
+    width: 100%; /* Make the parallax image div take the full width */
+  }
+
+  #hero .hero-image img {
+    max-width: 100%; /* Reduce image size to fit within the container */
+    height: auto;
+  }
+
+  #hero .hero-text h3 {
+    font-size: 2rem;
+    margin-top: 0; /* Remove the margin-top */
+  }
+
+  #hero .hero-text p {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .know-more-button {
+    margin-top: 10px; /* Add some space between text and button */
+    margin-bottom: 10px;
+  }
+  .achievement-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .achievement-item {
+    flex: 0 1 calc(100% - 40px);
+    margin: 10px 0;
+  }
+}
+
+
