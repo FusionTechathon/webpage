@@ -1,54 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="fav.png">
-    <title>FusionTechathon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="fav.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ 
+  <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap');
+    
+  </style>
+  
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
+
+  <title>FusionTechathon Hackathon</title>
 </head>
 <body>
-    <header>
-        <h1>FusionTechathon</h1>
-        <nav>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#scheduled-date">Scheduled Date</a></li>
-                <li><a href="#information">Information</a></li>
-                <!-- Add more navigation links if needed -->
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero" id="hero">
-        <div class="hero-content">
-            <h1>Welcome to FusionTechathon</h1>
-            <p>A gathering of innovative minds to shape the future.</p>
+  <header class="site-header transparent-header" id="header">
+    <nav class="desktop-nav">
+        <ul class="nav-links">
+            <li><a href="#hero">FTON</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <!-- Add more desktop navigation items as needed -->
+        </ul>
+    </nav>
+    <nav class="mobile-nav">
+        <div class="mobile-menu">
+            <button class="menu-button">
+                <span class="menu-icon"></span>
+            </button>
         </div>
-    </section>
+        <ul class="nav-links-mobile">
+            <li><a href="#hero">FTON</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <!-- Add more mobile menu items as needed -->
+        </ul>
+    </nav>
+</header>
 
-   <!-- Add the following code to each respective section -->
 
-<section class="scheduled-date" id="scheduled-date">
 
-    <div class="section-content">
-        <h2>Scheduled Date</h2>
-        <p>Join us on <span>October 15-17, 2023</span></p>
-        <p>Venue: <span>123 Innovation Street, TechCity</span></p>
+  <section id="hero" class="hero-section">
+    <div class="image-container tilt" data-tilt>
+      <img src="c.png" alt="Image" class="hero-image image-c" id="moving-image">
     </div>
-</section>
-
-<section class="information" id="information">
+    <svg viewBox="0 0 1320 300">
+      <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+        FusionTechathon
+      </text>
+    </svg>
+    <p class="hero-subtitle">Break Blend Build</p>
+    <div class="countdown">
+      <div class="countdown-box">
+          <span class="countdown-value" id="days">0</span>
+          <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-box">
+          <span class="countdown-value" id="hours">0</span>
+          <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-box">
+          <span class="countdown-value" id="minutes">0</span>
+          <span class="countdown-label">Minutes</span>
+      </div>
+      <div class="countdown-box">
+          <span class="countdown-value" id="seconds">0</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+      <div 
+      class="apply-button" 
+      data-hackathon-slug="fusiontech" 
+      data-button-theme="light"
+      style="height: 44px; width: 312px"
+    ></div>
     
-    <div class="section-content">
-        <h2>Event Information</h2>
-        <p>Join us for a weekend of coding, collaboration, and creativity at FusionTechathon. Our event is open to all tech enthusiasts...</p>
+      </section>
+      <section id="about" class="about-section animate-section animate-slide-up">
+        <div class="background-image image-about"></div>
+        <h2 class="about-title">About Us</h2>
+        <br>
+        <div class="about-card">
+          <p>We are dedicated leaders and community builders, committed to leveling the playing field for tech enthusiasts and career aspirants in our region. Our mission is to create an inclusive environment where innovation, understanding, and solutions thrive, both technically and culturally. Growth is an integral part of our journey, and we're organizing Central India's largest hackathon to amplify opportunities and community reach. Join us as we empower aspirations and drive progress.</p>
+        </div>
+        <br>
+        <div class="background-image image-about"></div>
+        <h2 class="about-title">About FusionTechathon</h2>
+        <br>
+        <div class="about-card">
+<p>Step into the extraordinary world of FusionTechathon! In just 12 thrilling hours, AI/ML, web development, and IoT intertwine to bring your wildest ideas to life. Whether you're a newbie or a tech guru, FusionTechathon ignites your innovation journey.Ready to unleash creativity like never before? Join FusionTechathon: where 12 hours redefine what's possible.</p>
+        </div>
+      </section>
+      <section id="sponsors" class="sponsor-section">
+        <div class="background-image image-about"></div>
+        <br>
+        <br>
+        <h2 class="about-title">Sponsors and Partners</h2>
+        <div class="section-divider-container">
+            <div class="section-divider"></div>
+            <span class="quantum-text">QUANTUM</span>
+            <img src="qa.png" alt="Circular Image" class="circular-image">
+            <div class="section-divider"></div>
+        </div>
+        <div class="glassmorphism-container">
+            <img src="al.png" alt="Image" class="glassmorphism-image">
+        </div>
+        <div class="section-divider-container">
+          <div class="section-divider"></div>
+          <span class="cyber-text">CYBER</span>
+          <img src="cy.png" alt="Circular Image" class="circular-image">
+          <div class="section-divider"></div>
+      </div>
+      <div class="side-by-side-container">
+
+      <div class="glassmorphism-container2">
+
+        <img src="df.png" alt="DEVFOLIO LOGO" class="glassmorphism-image">
     </div>
-</section>
+    <div class="glassmorphism-container2">
+      <img src="pl.png" alt="POLYGON LOGO" class="glassmorphism-image">
+  </div>
+  </div>
+  <div class="section-divider-container">
+    <div class="section-divider"></div>
+    <span class="binary-text">BINARY</span>
+    <img src="by.png" alt="Circular Image" class="circular-image">
+    <div class="section-divider"></div>
+</div>
+     <div class="side-by-side-container">
 
+      <div class="glassmorphism-container2">
+        <img src="fi.png" alt="FILECOIN LOGO" class="glassmorphism-image">
+    </div>
+    <div class="glassmorphism-container2">
+      <img src="re.png" alt="REPLIT LOGO" class="glassmorphism-image">
+  </div>
+  <div class="glassmorphism-container2">
+    <img src="so.png" alt="SOLANA LOGO" class="glassmorphism-image">
+</div>
+</div>
+<br>
+<br>
+        <div class="about-title">
+            Why Sponsor Us?
+        </div>
+        <br>
+        <div class="container-row">
+            <div class="container">
+                <i class="fas fa-gift container-icon"></i>
+                <h2 class="container-heading">Promotion</h2>
+                <p>Elevate Your Brand's Resonance: Unleash the Power of Sponsorship and Paint the Town with Your Company's Brilliance! Choose Your Tier of Influence and Amplify Your Presence.</p>
+            </div>
+            <div class="container">
+                <i class="fas fa-handshake container-icon"></i>
+                <h2 class="container-heading">Mutual Benefits</h2>
+                <p>Unlock Your Brand's Potential: Sponsor for enhanced visibility and event success—a gateway to new opportunities for your company.</p>
+            </div>
+        </div>
+        <div class="container-row">
+            <div class="container">
+                <i class="fas fa-cogs container-icon"></i>
+                <h2 class="container-heading">New Technology</h2>
+                <p>we integrate cutting-edge advancements into the event, creating an unforgettable experience  as we craft answers to tomorrow's challenges, where innovation merges with technology, opening new horizons for the future tech.</p>
+            </div>
+            <div class="container">
+                <i class="fas fa-lightbulb container-icon"></i>
+                <h2 class="container-heading">Inspiration</h2>
+                <p>The hackathon is a crucible of creativity, where students come together to test ideas, leverage new technologies, and find ingenious solutions to shape a better tomorrow.</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </section>
+    
+     
+      
+      <section id="faq" class="faq-section animate-section animate-slide-up">
+        <div class="main-container">
+        <br>
+        <br>
+        <br>
+          
+          
 
-    <footer>
-        <p>&copy; 2023 FusionTechathon. All rights reserved.</p>
-    </footer>
+          <div class="sponsor-text">
+            Frequently Asked Questions
+          </div>
+          <div class="faq-container">
+            <div class="faq-header">
+              <div class="faq-question"> <p>Q: When and where will FusionTechathon take place?</p></div>
+              <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>A: FusionTechathon starts at 8am in the morning and ends on the same day at 8pm at Alvas Engineering and Technology Campus, Moodbidri, Mangalore_574425.</p>
+            </div>
+          </div>
+          
+          <div class="faq-container">
+            <div class="faq-header">
+              <div class="faq-question"> <p>Q: Who can take part in this FusionTechathon?</p></div>
+              <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p> A: FusionTechathon is open only for the students who are pursuing engineering of any year/sem. All students belong to this category are welcome to take part in this event.</p>
+            </div>
+          </div>
+          <div class="faq-container">
+            <div class="faq-header">
+              <div class="faq-question"><p>Q: What is the duration of FusionTechathon?</p></div>
+              <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p> A:  FusionTechathon typically spans of 12 hours, during which participants work on their projects and engage with their fellow participants.</p>  
+            </div>
+          </div>
+          <div class="faq-container">
+            <div class="faq-header">
+              <div class="faq-question"> <p>Q: Can participate as solo?</p></div>
+              <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>A: Absolutely not, participants are encouraged to form teams to foster collaboration and diverse skillsets. Teams typically consist of 2-4 members.</p>
+            </div>
+          </div>
+          <div class="faq-container">
+            <div class="faq-header">
+              <div class="faq-question">
+                <p>Q:  What are the benefits of participating?</p>
+                </div>
+              <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>A:  Participating in FusionTechathon provides a chance to network with fellow tech enthusiasts, gain exposure to industry experts, showcase your skills, and even win exciting prizes.</p>
+            </div>
+          </div>
+          <div class="faq-container">
+            <div class="faq-header">
+              <div class="faq-question">
+              <p>Q:Will food be provided during the event?</p>
+            </div>
+              <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p> A: Yes, we've got your sustenance covered! Refreshments and delicious meals will be provided throughout the event, ensuring you stay energized and focused on your innovative endeavors.</p>
+          </div>
+        </div>
+      <div class="faq-container">
+        <div class="faq-header">
+          <div class="faq-question"> 
+            <p> Is accommodation available for participants?</p>
+          </div>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-answer">
+          <p>A: Participants will have the option to avail accommodation during the FusionTechathon event. However, please note that accommodation will be offered on a charged basis.</p>
+      </div>
+      </div>
+      </div>
+          
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+      </section>
+
+  <footer class="site-footer">
+   <span>Mail-reachfuciontechathon@gmail.com</span>
+    
+    <p>&copy; 2023 FusionTechathon. All rights reserved.</p>
+  </footer>
+  
 </body>
 </html>
