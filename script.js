@@ -1,62 +1,154 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector("header");
-  const navLinks = document.querySelector("header nav ul");
-  const menuLink = document.getElementById("menu-link");
-  const sidebarMenu = document.getElementById("sidebar-menu");
-  const sections = document.querySelectorAll("section");
-  let isTransparent = true;
-
-  const toggleNavLinks = () => {
-    if (window.innerWidth <= 768) { // Adjust the width as needed
-      navLinks.style.display = "none";
-      menuLink.style.display = "block"; // Show the "Menu" link
-    } else {
-      navLinks.style.display = "flex";
-      menuLink.style.display = "none"; // Hide the "Menu" link
-    }
-  };
-
-  if (window.scrollY > 0) {
-    header.classList.remove("header-transparent");
-    header.classList.add("header-scroll");
-    isTransparent = false;
-  }
-
-  toggleNavLinks(); // Initial call based on screen width
-
-  window.addEventListener("resize", () => {
-    toggleNavLinks(); // Call whenever the screen size changes
-  });
-
-  document.addEventListener("scroll", () => {
-    if (window.scrollY > 0 && isTransparent) {
-      header.classList.remove("header-transparent");
-      header.classList.add("header-scroll");
-      isTransparent = false;
-    } else if (window.scrollY === 0 && !isTransparent) {
-      header.classList.remove("header-scroll");
-      header.classList.add("header-transparent");
-      isTransparent = true;
-    }
-  });
-
-  menuLink.addEventListener("click", () => {
-    sidebarMenu.style.left = "0"; // Open the sidebar menu
-  });
-
-  sidebarMenu.addEventListener("click", () => {
-    sidebarMenu.style.left = "-250px"; // Close the sidebar menu
-  });
-
-  window.addEventListener('scroll', function () {
-    const scrollPosition = window.pageYOffset;
-    const parallaxImage = document.querySelector('.parallax-image');
-    parallaxImage.style.transform = `translateY(${scrollPosition * 0.15}px)`;
-  });
-
-  // Initialize Tilt.js on elements with the "tilt" class
-  $('.tilt').tilt({
-    scale: 1.01,
+    const movingImage = document.getElementById("moving-image");
     
+  
+    document.addEventListener("mousemove", (e) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+  
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+  
+      const moveX = (mouseX - centerX) * 0.02; // Adjust the factor for sensitivity
+      const moveY = (mouseY - centerY) * 0.02; // Adjust the factor for sensitivity
+  
+      movingImage.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      
+      const tiltX = (mouseX - centerX) / centerX;
+      const tiltY = (mouseY - centerY) / centerY;
+      
+      obImage.style.transform = `rotateX(${tiltY * 10}deg) rotateY(${-tiltX * 10}deg) translateZ(20px)`;
+    });
+    
+    $(".image-ob").tilt({
+      perspective: 1000,
+      scale: 1,
+      speed: 500,
+    });
+ // Example JavaScript code to set the countdown values (using date-fns library)
+const targetDate = new Date("2023-09-02 00:00:00");
+
+function updateCountdown() {
+    const now = new Date();
+    const timeDifference = targetDate - now;
+
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+const faqHeaders = document.querySelectorAll('.faq-header');
+
+faqHeaders.forEach((header) => {
+  const answer = header.parentElement.querySelector('.faq-answer');
+  const icon = header.querySelector('.faq-icon');
+
+  header.addEventListener('click', () => {
+    faqHeaders.forEach((h) => {
+      if (h !== header) {
+        h.parentElement.querySelector('.faq-answer').classList.remove('active');
+        h.querySelector('.faq-icon').classList.remove('active');
+      }
+    });
+
+    answer.classList.toggle('active');
+    icon.classList.toggle('active');
+  });
+});
+const header = document.getElementById('header');
+const heroSection = document.getElementById('header');
+
+window.addEventListener('scroll', () => {
+  // Get the height of the hero section
+  const heroHeight = heroSection.clientHeight;
+
+  // Determine the scroll position
+  const scrollPosition = window.scrollY;
+
+  // Toggle the header background based on the scroll position
+  if (scrollPosition > heroHeight) {
+    header.classList.remove('transparent-header');
+    header.classList.add('glassy-header');
+  } else {
+    header.classList.remove('glassy-header');
+    header.classList.add('transparent-header');
+  }
+});
+
+  });
+ 
+  $(document).ready(function () {
+    // Cache the navigation links and sections
+    var navLinks = $(".nav-links li a");
+    var sections = $(".main-container > section");
+  
+    $(window).scroll(function () {
+      var currentScroll = $(this).scrollTop();
+  
+      // Check which section is currently visible
+      sections.each(function () {
+        var sectionTop = $(this).offset().top - 100; // Adjust offset as needed
+        var sectionBottom = sectionTop + $(this).outerHeight();
+  
+        if (currentScroll >= sectionTop && currentScroll < sectionBottom) {
+          var sectionId = $(this).attr("id");
+  
+          // Remove active class from all links and add to the corresponding link
+          navLinks.removeClass("active");
+          $('a[href="#' + sectionId + '"]').addClass("active");
+        }
+      });
+    });
+    const menuButton = document.querySelector(".menu-button");
+    const mobileNavLinks = document.querySelector(".nav-links-mobile");
+
+    menuButton.addEventListener("click", () => {
+        mobileNavLinks.classList.toggle("open");
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", (event) => {
+        if (!menuButton.contains(event.target)) {
+            mobileNavLinks.classList.remove("open");
+        }
+    });
+  });  
+     
+  /*lohith*/
+  const faqHeaders = document.querySelectorAll('.faq-header');
+const faqAnswers = document.querySelectorAll('.faq-answer');
+
+faqHeaders.forEach((header) => {
+  const answer = header.parentElement.querySelector('.faq-answer');
+  const icon = header.querySelector('.faq-icon');
+
+  header.addEventListener('click', () => {
+    faqHeaders.forEach((h) => {
+      if (h !== header) {
+        h.parentElement.querySelector('.faq-answer').classList.remove('active');
+        h.querySelector('.faq-icon').classList.remove('active');
+      }
+    });
+
+    answer.classList.toggle('active');
+    icon.classList.toggle('active');
   });
 });
+
+faqAnswers.forEach((answer) => {
+  answer.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+});
+
+  
+ 
+  
