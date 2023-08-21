@@ -53,7 +53,7 @@ body, h1, h2, p {
 }
 .hero-logo {
   max-width: 150px; /* Adjust the max-width as needed */
-  margin-top: 50px; /* Add spacing between logo and SVG */
+  margin-bottom: 5px; /* Add spacing between logo and SVG */
 }
 
 svg {
@@ -281,7 +281,7 @@ svg text {
   font-family: 'Staatliches', cursive;
   background-image: linear-gradient(45deg, #bb4b00 0%, #ffbb00 50%, #eb6200 100%);
   background-size: 200% auto;
-  margin-top:10px;
+  margin-top:5px;
   color: transparent;
   font-size: 2.5rem;
   background-clip: text;
