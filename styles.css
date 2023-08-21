@@ -51,6 +51,11 @@ body, h1, h2, p {
         background-position: 0% 50%;
     }
 }
+.hero-logo {
+  max-width: 200px; /* Adjust the max-width as needed */
+  margin-bottom: 20px; /* Add spacing between logo and SVG */
+}
+
 svg {
 	font-family: 'Russo One', sans-serif;
 	
@@ -191,6 +196,7 @@ svg text {
     align-items: center;
     margin-top: 20px;
 }
+
 
 .button {
     display: inline-block;
