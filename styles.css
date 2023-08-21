@@ -53,7 +53,7 @@ body, h1, h2, p {
 }
 .hero-logo {
   max-width: 150px; /* Adjust the max-width as needed */
-  margin-bottom: 10px; /* Add spacing between logo and SVG */
+  margin-top: 20px; /* Add spacing between logo and SVG */
 }
 
 svg {
@@ -277,7 +277,16 @@ svg text {
     background-position: 0% 50%;
   }
 }
-
+.year {
+  font-family: 'Staatliches', cursive;
+  background-image: linear-gradient(45deg, #bb4b00 0%, #ffbb00 50%, #eb6200 100%);
+  background-size: 200% auto;
+  color: transparent;
+  font-size: 2.5rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradientAnimation 5s linear infinite;
+}
 /* Apply the animation to the about title */
 .about-title {
   font-family: 'Staatliches', cursive;
