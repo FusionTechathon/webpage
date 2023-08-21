@@ -281,6 +281,7 @@ svg text {
   font-family: 'Staatliches', cursive;
   background-image: linear-gradient(45deg, #bb4b00 0%, #ffbb00 50%, #eb6200 100%);
   background-size: 200% auto;
+  margin-top:10px;
   color: transparent;
   font-size: 2.5rem;
   background-clip: text;
