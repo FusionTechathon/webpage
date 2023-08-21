@@ -52,8 +52,8 @@ body, h1, h2, p {
     }
 }
 .hero-logo {
-  max-width: 200px; /* Adjust the max-width as needed */
-  margin-bottom: 20px; /* Add spacing between logo and SVG */
+  max-width: 150px; /* Adjust the max-width as needed */
+  margin-bottom: 10px; /* Add spacing between logo and SVG */
 }
 
 svg {
