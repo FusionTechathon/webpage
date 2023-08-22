@@ -66,7 +66,7 @@ svg text {
 text-transform: uppercase;
 animation: stroke 5s infinite alternate;
 stroke: #ffffff;
-font-size: 130px;
+font-size: 150px;
 }
 @keyframes stroke {
 0%   {
@@ -544,6 +544,16 @@ left: 50%;
 transform: translate(-50%, -50%);
 z-index: 1; /* Place the text above the image */
 }
+.binary-text1 {
+  font-family: 'Lexend', sans-serif;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Place the text above the image */
+  }
 .quantum-text {
 font-family: 'Lexend', sans-serif;
 font-size: 2rem;
@@ -977,6 +987,9 @@ left: 50%;
 transform: translate(-50%, -50%);
 z-index: 1; /* Place the text above the image */
 }
+
+
+
 .quantum-text {
 font-family: 'Lexend', sans-serif;
 font-size: 2rem;
