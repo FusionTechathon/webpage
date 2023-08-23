@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const tiltX = (mouseX - centerX) / centerX;
       const tiltY = (mouseY - centerY) / centerY;
       
-      obImage.style.transform = `rotateX(${tiltY * 10}deg) rotateY(${-tiltX * 10}deg) translateZ(20px)`;
+      
     });
     
     $(".image-ob").tilt({
