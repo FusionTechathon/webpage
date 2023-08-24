@@ -968,7 +968,7 @@ font-family: 'Lexend', sans-serif;
 font-size: 2rem;
 color: rgb(255, 255, 255);
 position: absolute;
-top: 36%;
+top: 40%;
 left: 50%;
 transform: translate(-50%, -50%);
 z-index: 1; /* Place the text above the image */
