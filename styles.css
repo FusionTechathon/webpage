@@ -16,7 +16,7 @@ body, h1, h2, p {
   position: relative;
 }
 
-.about-section, .schedule-section {
+.about-section, .schedule-section , .prize-section{
   width: 100%;
   height: auto;
   display: flex;
@@ -110,7 +110,17 @@ font-size: 120px;
   padding-bottom: 1px;
   margin-bottom: 2px;
 }
-
+.prize-section p{
+  font-family: 'Staatliches', cursive;
+  font-size: 0.8rem;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding-bottom: 1px;
+  margin-bottom: 2px;
+  margin-left: 30%;
+}
 .menu-button {
 background: none;
 border: none;
@@ -297,6 +307,25 @@ padding: 40px 0; /* Add padding for content spacing */
   background-position: 0% 50%;
 }
 }
+.prize-section {
+  background: linear-gradient(135deg, #000000e8 0%, rgba(0, 0, 0, 0.812) 50%), linear-gradient(135deg, #00128a, #2c03fad9);
+  background-size: cover;
+  padding: 40px 0; /* Add padding for content spacing */
+  }
+  
+  
+  /* Animation for smooth linear gradient */
+  @keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+  }
 .year {
 font-family: 'Staatliches', cursive;
 background-image: linear-gradient(45deg, #ff3dffc0, #8700c1, #ffffffb0);
@@ -434,6 +463,16 @@ transform: scale(1.05);
 box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
 background-color: rgba(255, 255, 255, 0.2); /* Change background color on hover */
 }
+.glassmorphism-container3:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.2); /* Change background color on hover */
+  }
+  .glassmorphism-container4:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.2); /* Change background color on hover */
+    }
 /* Add styles for the side-by-side container */
 .side-by-side-container {
 display: flex; /* Use flexbox to arrange children side by side */
@@ -461,6 +500,7 @@ backdrop-filter: blur(10px);
 border-radius: 10px;
 margin: 20px;
 display: flex;
+margin-left: 100px;
 align-items: center;
 justify-content: center;
 transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -474,6 +514,52 @@ transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-
   justify-content: center;
  font-size: 25px;
   }
+  .glassmorphism-container3 {
+    font-family: 'Staatliches', cursive;
+    width: 350px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 20px;
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+    .glassmorphism-container4 {
+      font-family: 'Staatliches', cursive;
+      width: 300px;
+      height: 100px;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      margin: 20px;
+      display: flex;
+      margin-top: 10px;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      }
+    .glassmorphism-container3 p{
+ 
+      font-family: 'Lexend', sans-serif;
+      margin: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     font-size: 30px;
+      }
+      .glassmorphism-container4 p{
+ 
+        font-family: 'Lexend', sans-serif;
+        margin: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       font-size: 30px;
+        }
 /* Add styles for the additional container */
 .additional-container {
 width: 300px;
@@ -490,7 +576,6 @@ max-width: 80%; /* Make sure the image fits within the container */
 max-height: 80%; /* Make sure the image fits within the container */
 /* Rounded corners */
 }
-
 
 /* Add styling for the circular container */
 /* Replace circular-container styles with circular-image styles */
@@ -799,28 +884,27 @@ padding: 10px 0;
 display: block;
 }
 .register-button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 0 10px;
-  margin-top: 10px;
-  background-color: #ffbb00;
-  color: #000;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none;
-  border-radius: 5px;
-  z-index: 7;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    margin-top: 10px;
+    background-color: #ffbb00;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 7;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
-}
-
-.register-button:hover {
-  background-color: #eb6200;
-  color: #fff;
-}
-
+  }
+  
+  .register-button:hover {
+    background-color: #eb6200;
+    color: #fff;
+  }
 /* Media query for mobile responsiveness */
 @media (max-width: 768px) {
   .register-button {
